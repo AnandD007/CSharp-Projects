@@ -1,0 +1,15 @@
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\bin\Debug\net6.0\DeliveryKycConsoleApp.exe
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\bin\Debug\net6.0\DeliveryKycConsoleApp.deps.json
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\bin\Debug\net6.0\DeliveryKycConsoleApp.runtimeconfig.json
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\bin\Debug\net6.0\DeliveryKycConsoleApp.dll
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\bin\Debug\net6.0\DeliveryKycConsoleApp.pdb
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.csproj.AssemblyReference.cache
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.AssemblyInfoInputs.cache
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.AssemblyInfo.cs
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.csproj.CoreCompileInputs.cache
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.dll
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\refint\DeliveryKycConsoleApp.dll
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.pdb
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\DeliveryKycConsoleApp.genruntimeconfig.cache
+D:\c drive downloads\MAVERICK\IncubX\Assignments\IX-Internship-Assignment-2\DeliveryKycConsoleApp\DeliveryKycConsoleApp\obj\Debug\net6.0\ref\DeliveryKycConsoleApp.dll
