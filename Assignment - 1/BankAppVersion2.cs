@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection;
-using System.Text;
+
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Assignment_2_Bank_Registration_System
 {
@@ -26,45 +20,46 @@ namespace Assignment_2_Bank_Registration_System
     }
     internal class AllDetails
     {
-       protected string firstName = null;
-       protected string lastName = "";
-       protected string middleName = "";
-       protected string emailId = "";
-       protected long phoneNumber = 0;
-       protected string gender = "";
-       protected string panNumber = "";
-       protected string dateOfBirth = "";
-       protected string maritalStatus = "";// {"single","married","divorced","widowed"}
-       protected string permanentAddress = "";
-       protected string communicationAddress = "";
+       internal string firstName = "";
+        internal string lastName = "";
+        internal string middleName = "";
+        internal string emailId = "";
+        internal long phoneNumber = 0;
+        internal string gender = "";
+        internal string panNumber = "";
+        internal string dateOfBirth = "";
+        internal string maritalStatus = "";     // {"single","married","divorced","widowed"}
+        internal string permanentAddress = "";
+        internal string communicationAddress = "";
        private long creditAmountLimit = 0;
-        protected Regex regexForOnlyNumber = new Regex(@"[\d]$");
-       protected bool m = true;
-       protected int i = 0;
-       protected long salary = 0;
+        internal Regex regexForOnlyAlphabets = new Regex(@"[\d]");
+        internal Regex regexForOnlyNumber = new Regex(@"^-?[0-9][0-9,\.]+$");
+        internal bool addingAccountCount = true;
+        internal int i = 0;
+        internal long salary = 0;
+        internal string checkPhoneNumber = "";
         internal AllDetails()
         {
 
-            while (m == true)
+            while (addingAccountCount == true)
             {
                 Console.WriteLine("\n================++++++WELCOME TO BANK OF PUNE++++++================\n\n");
-                // new user entry
                 Console.WriteLine("Create Your Personal Details:\n");
                 Console.Write("\nEnter Your First Name:");
             gotoFirstName:
                 firstName = Console.ReadLine();  // You need to enter fname second time only if our validations throws error for your input..!
-                // Null Content validation checking
+
                 if (string.IsNullOrEmpty(firstName) || string.IsNullOrWhiteSpace(firstName))
                 {
                     Console.Write("\nFirst name should be not null..!\n\nEnter Your First Name:");
                     goto gotoFirstName;
                 }
-                else if (regexForOnlyNumber.IsMatch(firstName))
+                else if (regexForOnlyAlphabets.IsMatch(firstName))
                 {
                     Console.Write("\nFirst Name letters should be alphabets...!\n\nEnter Your First Name:");
                     goto gotoFirstName;
                 }
-                Console.Write("\nEnter Your Middle Name (Optional):");
+                Console.Write("\n\nEnter Your Middle Name (Optional):");
                 gotoMiddleName:
                 middleName = Console.ReadLine();
                 if (regexForOnlyNumber.IsMatch(middleName))
@@ -80,7 +75,7 @@ namespace Assignment_2_Bank_Registration_System
                     Console.Write("\nLast name should not be null..!\n\nEnter Your List Name:");
                     goto gotoLastName;
                 }
-                else if (regexForOnlyNumber.IsMatch(lastName))
+                else if (regexForOnlyAlphabets.IsMatch(lastName))
                 {
                     Console.Write("\nLast Name letters should be alphabets...!\n\nEnter Your Last Name:");
                     goto gotoLastName;
@@ -102,18 +97,18 @@ namespace Assignment_2_Bank_Registration_System
                 Console.Write("\n\nEnter Your Phone Number:");
 
             phoneNumberAdder:
-                string phno = Console.ReadLine();
+                checkPhoneNumber = Console.ReadLine();
 
-                if (!(regexForOnlyNumber.IsMatch(phno)))
+                if (!(regexForOnlyNumber.IsMatch(checkPhoneNumber)))
                 {
                     Console.Write("\nAll the values should be numeric..!\n\nEnter Your Phone Number:");
                     goto phoneNumberAdder;
                 }
                 else
                 {
-                    phoneNumber = Convert.ToInt64(phno);
+                    phoneNumber = Convert.ToInt64(checkPhoneNumber);
                 }
-                if (phoneNumber == null || phoneNumber == 0)
+                if (string.IsNullOrEmpty(checkPhoneNumber) || string.IsNullOrWhiteSpace(checkPhoneNumber))
                 {
                     Console.Write("\nInvalid Phone Number should not be null..!\n\nEnter Your Phone Number:");
                     goto phoneNumberAdder;
@@ -183,7 +178,7 @@ namespace Assignment_2_Bank_Registration_System
                         DateTime testDate = new DateTime(Convert.ToInt32(dateParts[2]), Convert.ToInt32(dateParts[0]),
                         Convert.ToInt32(dateParts[1]));
 
-                        if (Convert.ToInt16(dateParts[1]) <= 2023-18)
+                        if (Convert.ToInt16(dateParts[1]) <= 2002 || (2023 - Convert.ToInt16(dateParts[1])) <= 120 )
                         {
                             Console.WriteLine("To Create Your Account. Your Age Should be Above 18 Years.");
                             break;
@@ -225,7 +220,7 @@ namespace Assignment_2_Bank_Registration_System
                         Console.Write("\nSpouse Full name should be not null..!\n\n    Enter Your Spouse Full Name:");
                         goto spouseNameChecker;
                     }
-                    else if (regexForOnlyNumber.IsMatch(spouseName))
+                    else if (regexForOnlyAlphabets.IsMatch(spouseName))
                     {
                         Console.Write("\nFull Name letters should be alphabets...!\n\n    Enter Your Spouse Full Name:");
                         goto spouseNameChecker;
@@ -246,7 +241,7 @@ namespace Assignment_2_Bank_Registration_System
                                 Console.Write("\nChild Full name should be not null..!\n\n   Enter the {0} Child Full Name:", t1);
                                 goto childrensNameChecker;
                             }
-                            else if (regexForOnlyNumber.IsMatch(childrenNames[t1]))
+                            else if (regexForOnlyAlphabets.IsMatch(childrenNames[t1]))
                             {
                                 Console.Write("\nFull Name letters should be alphabets...!\n\n   Enter the {0} Child Full Name:", t1);
                                 goto childrensNameChecker;
@@ -269,9 +264,9 @@ namespace Assignment_2_Bank_Registration_System
                     Console.Write("\nInvalid Permanent Address. Field should not be null..!\n\nEnter Your Permanent Address (As Per Govt Id Proof):");
                     goto permanentAddress;
                 }
-                else if (permanentAddress.Length >= 20)
+                else if (permanentAddress.Length <= 20)
                 {
-                    Console.Write("\n\nEnter Your Full Permanent Address (As Per Govt Id Proof):");
+                    Console.Write("\n\nInvalid Address Length...!\nEnter Your Full Permanent Address (As Per Govt Id Proof):");
                     goto permanentAddress;
                 }
                 Console.Write("\n\nCommunication Address is same as Permanent Address (y/n)?: ");
@@ -291,7 +286,7 @@ namespace Assignment_2_Bank_Registration_System
                         Console.Write("\nInvalid Communication Address. Field should not be null..!\n\nEnter Your Communication Address (As Per Current Address Id Proof):");
                         goto communicationAddress;
                     }
-                    else if (communicationAddress.Length >= 20)
+                    else if (communicationAddress.Length <= 20)
                     {
                         Console.Write("\n\nEnter Your Full Communication Address (As Per Current Address Id Proof):");
                         goto communicationAddress;
@@ -309,29 +304,6 @@ namespace Assignment_2_Bank_Registration_System
                 Random accountNumberGenerator = new Random();
                 long accountNumber = accountNumberGenerator.Next();
 
-
-                // ------------------------------------------------------------------------------
-
-
-
-                Console.Write("\nDo You want to create another account (y/n)?");
-                string createAnotherAccount = null;
-                createAnotherAccount = Console.ReadLine();
-                if (createAnotherAccount == "yes" || createAnotherAccount == "Yes" || createAnotherAccount == "y" || createAnotherAccount == "Y")
-                {
-                    m = true;
-                    i++;
-                }
-                else if (createAnotherAccount == "No" || createAnotherAccount == "No" || createAnotherAccount == "N" || createAnotherAccount == "n")
-                {
-                    Console.Write("\n\n+++++-------Thank You For Using Our Bank-------+++++");
-                    m = false;
-                }
-                else
-                {
-                    Console.Write("\n\n+++++-------Thank You For Using Our Bank-------+++++");
-                    m = false;
-                }
 
                 // Credit Card class
                 Console.Write("\n\nDo You want credit card (y/n)?: ");
@@ -352,7 +324,7 @@ namespace Assignment_2_Bank_Registration_System
                         creditAmountLimit = 63500;
                         Console.WriteLine("Congratulations. You are elegible to get credit card amount: {0}", creditAmountLimit);
                     }
-                    else if (salary >= 250000 || salary <= 500000)
+                    else if (salary >= 250000 && salary <= 500000)
                     {
                         creditAmountLimit = 23500;
                         Console.WriteLine("Congratulations. You are elegible to get credit card amount: {0}", creditAmountLimit);
@@ -373,6 +345,28 @@ namespace Assignment_2_Bank_Registration_System
                 }
                 Random creditCardRandomNumberGeneration = new Random();
                 long creditCardNumber = creditCardRandomNumberGeneration.Next();
+
+
+                Console.Write("\nDo You want to create another account (y/n)?");
+                string createAnotherAccount = null;
+                createAnotherAccount = Console.ReadLine();
+                if (createAnotherAccount == "yes" || createAnotherAccount == "Yes" || createAnotherAccount == "y" || createAnotherAccount == "Y")
+                {
+                    addingAccountCount = true;
+                    i++;
+                }
+                else if (createAnotherAccount == "No" || createAnotherAccount == "No" || createAnotherAccount == "N" || createAnotherAccount == "n")
+                {
+                    Console.Write("\n\n+++++-------Thank You For Using Our Bank-------+++++");
+                    addingAccountCount = false;
+                }
+                else
+                {
+                    Console.Write("\n\n+++++-------Thank You For Using Our Bank-------+++++");
+                    addingAccountCount = false;
+                }
+
+                
 
 
                 // ----------------------------------------------------------------------------------------------------
