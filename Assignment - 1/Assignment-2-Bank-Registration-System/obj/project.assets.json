@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c drive downloads\\MAVERICK\\IncubX\\Assignments\\IX-Internship-Assignment-2\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System.csproj",
+      "projectUniqueName": "D:\\JioPhone Data\\CSharp\\CSharp-Projects\\Assignment - 1\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System.csproj",
       "projectName": "Assignment-2-Bank-Registration-System",
-      "projectPath": "D:\\c drive downloads\\MAVERICK\\IncubX\\Assignments\\IX-Internship-Assignment-2\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System.csproj",
+      "projectPath": "D:\\JioPhone Data\\CSharp\\CSharp-Projects\\Assignment - 1\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\c drive downloads\\MAVERICK\\IncubX\\Assignments\\IX-Internship-Assignment-2\\Assignment-2-Bank-Registration-System\\Assignment-2-Bank-Registration-System\\obj\\",
+      "outputPath": "D:\\JioPhone Data\\CSharp\\CSharp-Projects\\Assignment - 1\\Assignment-2-Bank-Registration-System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

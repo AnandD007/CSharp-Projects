@@ -1,4 +1,6 @@
-﻿// Banking Registration System:
+﻿/*
+
+// Banking Registration System:
 using System;
 using System.Security.Cryptography;
 
@@ -344,3 +346,4 @@ namespace Assignment_2_Bank_Registration_System
         }
     }
 }
+*/
