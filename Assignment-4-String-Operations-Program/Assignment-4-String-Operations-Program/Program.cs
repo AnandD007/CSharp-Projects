@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 
 namespace StringFunctionsRelatedProblemStatements
@@ -26,24 +26,28 @@ namespace StringFunctionsRelatedProblemStatements
             {
                 case "1": 
                     LongestCommonPrefixFinder userInput1 = new LongestCommonPrefixFinder();
-                    userInput1.longestCommonPrefixFinderFunction();
+                    Console.Write(userInput1.LongestCommonPrefixFinderFunction());
                     break;
+
                 case "2":
                     CountTheSentencesFromInputString userInput2 = new CountTheSentencesFromInputString();
                     userInput2.CountTheSentencesFromInputStringFunction();
                     break;
+
                 case "3":
                     AllStringFunctions userInput3 = new AllStringFunctions();
-                    
                     break;
+
                 case "4":
                     ReverseUserInputString userInput4 = new ReverseUserInputString();
                     userInput4.ReverseUserInputStringFunction();
                     break;
+
                 case "5":
                     DuplicateLettersRemover userInput5 = new DuplicateLettersRemover();
-                    userInput5.duplicateLettersRemoverFunction();
+                    userInput5.DuplicateLettersRemoverFunction();
                     break;
+
                 case "6":
                     Console.WriteLine("Bye Bye..!");
                     Environment.Exit(0);
